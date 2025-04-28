@@ -67,3 +67,8 @@ fun SurahDetailScreen(surahNumber: Int) {
         }
     }
 }
+
+@Composable
+fun AyahItem(ayah: Ayah) {
+
+}

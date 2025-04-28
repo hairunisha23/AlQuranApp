@@ -11,4 +11,5 @@ interface ApiService {
 
     @GET("v1/surah/{number}")
     fun getSurah(@Path("number") number: Int): Call<AllSurahResponse>
+
 }
