@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.alquranapp">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Izin yang dibutuhkan -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -16,23 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AlQuranApp">
 
-        <!-- Activity utama (pakai Jetpack Compose) -->
         <activity android:name=".ui.MainActivity"
-            android:exported="true"
-            tools:ignore="MissingClass"> <!-- pastikan exported true untuk launcher -->
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- Service untuk pemutar audio (bisa diubah sesuai nama servicemu) -->
         <service
-            android:name="AudioPlayerService"
+            android:name=".AudioPlayerService"
             android:exported="false"
-            android:foregroundServiceType="mediaPlayback"
-            tools:ignore="MissingClass" />
-
+            android:foregroundServiceType="mediaPlayback" />
     </application>
 
 </manifest>
