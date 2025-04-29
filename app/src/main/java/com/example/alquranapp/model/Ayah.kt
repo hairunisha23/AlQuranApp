@@ -3,6 +3,7 @@ package com.example.alquranapp.model
 data class Ayah(
     val number: Int,
     val text: String,
+    val numberInSurah: Int,
     val juz: Int,
     val manzil: Int,
     val page: Int,
